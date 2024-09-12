@@ -55,8 +55,8 @@ jobs:
         env:
           CIBW_BUILD: cp${{ matrix.python }}-manylinux_x86_64
           CIBW_ARCHS: all
-          CIBW_MANYLINUX_X86_64_IMAGE: manylinux2014
-          CIBW_BEFORE_ALL_LINUX: yum install -y curl zip unzip tar; pip install ninja
+          CIBW_MANYLINUX_X86_64_IMAGE: manylinux_2_28
+          CIBW_BEFORE_ALL_LINUX: dnf install -y curl zip unzip tar; pip install ninja
           CIBW_ENVIRONMENT: VCPKG_FORCE_SYSTEM_BINARIES=1 DEBUG_VCPKG_INSTALL=1
           CIBW_ENVIRONMENT_PASS_LINUX: VCPKG_FORCE_SYSTEM_BINARIES DEBUG_VCPKG_INSTALL GITHUB_ACTIONS ACTIONS_CACHE_URL ACTIONS_RUNTIME_TOKEN
           CIBW_BUILD_VERBOSITY: 1
