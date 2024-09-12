@@ -1,0 +1,17 @@
+[build-system]
+requires = [
+	"setuptools>=42",
+	"wheel",
+	"scikit-build-core",
+	"pybind11>=2.13",
+]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "sk_vcpkg_example"
+version = "0.0.1"
+requires-python = ">=3.9"
+
+[tool.scikit-build]
+sdist.exclude = [".github/"]
+wheel.license-files = []
