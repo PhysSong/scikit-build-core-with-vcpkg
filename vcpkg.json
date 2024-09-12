@@ -3,5 +3,13 @@
     "name": "sk-vcpkg-example",
     "dependencies": [
         "fmt"
-    ]
+    ],
+    "features":{
+        "pybind11": {
+            "description": "Use pybind11 from vcpkg",
+            "dependencies": [
+                "pybind11"
+            ]
+        }
+    }
 }
